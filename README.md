@@ -1,14 +1,14 @@
 # 🧩 Multi-site, Multi-language Static Website with Next.js
 
-This project is a **Next.js** setup designed to serve multiple single-page websites (e.g., `/product`, `/saas`, `/`) each with **multi-language support** (e.g., `/en`, `/fr`). It's optimized for **static hosting** (via `next export`) and supports **clean URLs** without clutter like `/site/` in the path.
+This project is a **Next.js** setup designed to serve multiple single-page websites (e.g., `/veterinarians`, `/groomers`, `/`) each with **multi-language support** (e.g., `/en`, `/fr`). It's optimized for **static hosting** (via `next export`) and supports **clean URLs** without clutter like `/site/` in the path.
 
 ---
 
 ## ✅ Features
 
-- 🧩 Multiple sites from one codebase (`main`, `product`, `saas`)
+- 🧩 Multiple sites from one codebase (`main`, `veterinarians`, `groomers`)
 - 🌍 Multi-language support (`/en`, `/fr`)
-- 🔁 Redirects to default language (e.g., `/product` → `/product/en`)
+- 🔁 Redirects to default language (e.g., `/veterinarians` → `/veterinarians/en`)
 - 🧼 Clean URLs using rewrites (no `/site/` visible)
 - ⚡ Fully static-exportable (`next export`)
 - 🎨 Different templates per site
@@ -22,13 +22,13 @@ src/
 ├── pages/
 │   ├── [lang]/index.tsx              → `/en`, `/fr` (main site)
 │   └── site/
-│       └── [site]/[lang]/index.tsx   → `/product/en`, `/saas/fr`
+│       └── [site]/[lang]/index.tsx   → `/veterinarians/en`, `/groomers/fr`
 ├── components/
 │   └── templates/                    → Shared + per-site templates
 ├── sites/
 │   ├── main/en.ts                    → Static content per site/language
-│   ├── product/fr.ts
-│   └── saas/en.ts
+│   ├── veterinarians/fr.ts
+│   └── groomers/en.ts
 ├── utils/
 │   └── getSiteContent.ts
 └── next.config.ts
@@ -38,13 +38,13 @@ src/
 
 ## 🚦 Routing Overview
 
-| URL           | Description                |
-| ------------- | -------------------------- |
-| `/`           | Redirects to `/en`         |
-| `/en`, `/fr`  | Main website in language   |
-| `/product`    | Redirects to `/product/en` |
-| `/product/en` | Product site (English)     |
-| `/saas/fr`    | SaaS site (French)         |
+| URL                 | Description                      |
+|---------------------|----------------------------------|
+| `/`                 | Redirects to `/en`               |
+| `/en`, `/fr`        | Main website in language         |
+| `/veterinarians`    | Redirects to `/veterinarians/en` |
+| `/veterinarians/en` | Veterinarians site (English)     |
+| `/groomers/fr`      | Groomers site (French)           |
 
 ---
 
@@ -82,10 +82,10 @@ src/
 
 - **Redirects**:
   - `/` → `/en`
-  - `/product` → `/product/en`
-  - `/saas` → `/saas/en`
+  - `/veterinarians` → `/veterinarians/en`
+  - `/groomers` → `/groomers/en`
 - **Rewrites**:
-  - `/product/en` → `/site/product/en` (invisible to the user)
+  - `/veterinarians/en` → `/site/veterinarians/en` (invisible to the user)
 
 ---
 

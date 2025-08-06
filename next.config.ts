@@ -9,13 +9,13 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
-        source: '/product',
-        destination: '/product/en',
+        source: '/veterinarians',
+        destination: '/veterinarians/en',
         permanent: false,
       },
       {
-        source: '/saas',
-        destination: '/saas/en',
+        source: '/groomers',
+        destination: '/groomers/en',
         permanent: false,
       },
     ];
@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: '/:site(product|saas)/:lang',
+        source: '/:site(veterinarians|groomers)/:lang',
         destination: '/site/:site/:lang',
       },
     ];
