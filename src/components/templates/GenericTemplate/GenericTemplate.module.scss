@@ -1,4 +1,30 @@
+.inactiveLink {
+  color: gray;
+  cursor: default;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.activeLink {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.test {
+  &_groomers {
+    color: green;
+  }
+
+  &_veterinarians {
+    color: red;
+  }
+}
+
 .main {
-  background-color: #c45454;
-  padding: 2rem;
+  display: flex;
+
+  & > *:nth-child(2) {
+    order: 1;
+  }
 }
