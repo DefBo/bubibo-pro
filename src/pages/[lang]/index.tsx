@@ -7,7 +7,7 @@ export default function MainPage({ content }: { content: any }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const langs = ['en', 'fr'];
+  const langs = ['ua', 'ru', 'en'];
   const paths = langs.map((lang) => ({ params: { lang } }));
 
   return { paths, fallback: false };

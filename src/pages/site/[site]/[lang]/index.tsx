@@ -13,7 +13,7 @@ export default function SitePage({ content, site }: Props) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const sites = ['veterinarians', 'groomers'];
-  const langs = ['en', 'fr'];
+  const langs = ['ua', 'ru', 'en'];
 
   const paths = sites.flatMap((site) =>
     langs.map((lang) => ({
