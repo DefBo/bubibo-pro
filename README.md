@@ -1,14 +1,14 @@
 # 🧩 Multi-site, Multi-language Static Website with Next.js
 
-This project is a **Next.js** setup designed to serve multiple single-page websites (e.g., `/veterinarians`, `/groomers`, `/`) each with **multi-language support** (e.g., `/en`, `/fr`). It's optimized for **static hosting** (via `next export`) and supports **clean URLs** without clutter like `/site/` in the path.
+This project is a **Next.js** setup designed to serve multiple single-page websites (e.g., `/veterinarians`, `/groomers`, `/`) each with **multi-language support** (e.g., `/ua`, `/ru`, `/en`). It's optimized for **static hosting** (via `next export`) and supports **clean URLs** without clutter like `/site/` in the path.
 
 ---
 
 ## ✅ Features
 
 - 🧩 Multiple sites from one codebase (`main`, `veterinarians`, `groomers`)
-- 🌍 Multi-language support (`/en`, `/fr`)
-- 🔁 Redirects to default language (e.g., `/veterinarians` → `/veterinarians/en`)
+- 🌍 Multi-language support (`/ua`, `/ru`, `/en`)
+- 🔁 Redirects to default language (e.g., `/veterinarians` → `/veterinarians/ua`)
 - 🧼 Clean URLs using rewrites (no `/site/` visible)
 - ⚡ Fully static-exportable (`next export`)
 - 🎨 Different templates per site
@@ -20,14 +20,14 @@ This project is a **Next.js** setup designed to serve multiple single-page websi
 ```
 src/
 ├── pages/
-│   ├── [lang]/index.tsx              → `/en`, `/fr` (main site)
+│   ├── [lang]/index.tsx              → `/ua`, `/ru`, `/en` (main site)
 │   └── site/
-│       └── [site]/[lang]/index.tsx   → `/veterinarians/en`, `/groomers/fr`
+│       └── [site]/[lang]/index.tsx   → `/veterinarians/ua`, `/groomers/en`
 ├── components/
 │   └── templates/                    → Shared + per-site templates
 ├── sites/
-│   ├── main/en.ts                    → Static content per site/language
-│   ├── veterinarians/fr.ts
+│   ├── main/ua.ts                    → Static content per site/language
+│   ├── veterinarians/ru.ts
 │   └── groomers/en.ts
 ├── utils/
 │   └── getSiteContent.ts
@@ -40,11 +40,11 @@ src/
 
 | URL                 | Description                      |
 |---------------------|----------------------------------|
-| `/`                 | Redirects to `/en`               |
-| `/en`, `/fr`        | Main website in language         |
-| `/veterinarians`    | Redirects to `/veterinarians/en` |
-| `/veterinarians/en` | Veterinarians site (English)     |
-| `/groomers/fr`      | Groomers site (French)           |
+| `/`                 | Redirects to `/ua`               |
+| `/ua`, `/ru`, `/en` | Main website in language         |
+| `/veterinarians`    | Redirects to `/veterinarians/ua` |
+| `/veterinarians/ua` | Veterinarians site (Ukrainian)   |
+| `/groomers/ru`      | Groomers site (Russian)          |
 
 ---
 

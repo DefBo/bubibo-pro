@@ -5,17 +5,17 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/',
-        destination: '/en',
+        destination: '/ua',
         permanent: false,
       },
       {
         source: '/veterinarians',
-        destination: '/veterinarians/en',
+        destination: '/veterinarians/ua',
         permanent: false,
       },
       {
         source: '/groomers',
-        destination: '/groomers/en',
+        destination: '/groomers/ua',
         permanent: false,
       },
     ];

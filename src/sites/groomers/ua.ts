@@ -2,38 +2,38 @@ export default {
   navUrls: [
     {
       navUrl: '#advantages',
-      navUrlText: 'Advantages',
+      navUrlText: 'Переваги',
     },
     {
       navUrl: '#functionality',
-      navUrlText: 'Functionality',
+      navUrlText: 'Функціонал',
     },
     {
       navUrl: '#ecosystem',
-      navUrlText: 'Ecosystem',
+      navUrlText: 'Екосистема',
     },
     {
       navUrl: '#feedback',
-      navUrlText: 'Feedback',
+      navUrlText: 'Відгуки',
     },
     {
       navUrl: '#plans',
-      navUrlText: 'Plans',
+      navUrlText: 'Тарифи',
     },
     {
       navUrl: '#faq',
       navUrlText: 'FAQ',
     },
   ],
-  tryForFreeModalName: 'Try for free',
+  tryForFreeModalName: 'Спробуй безкоштовно',
   availableRoutes: [
     {
       site: 'veterinarians',
-      label: 'Veterinarians',
+      label: 'Ветеринарія',
     },
     {
       site: 'groomers',
-      label: 'Grooming',
+      label: 'Грумінг',
     },
   ],
 };

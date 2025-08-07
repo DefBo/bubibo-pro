@@ -5,15 +5,16 @@ import { getSiteContent } from '@/utils/getSiteContent';
 type Props = {
   content: any;
   site: string;
+  lang: string;
 };
 
-export default function SitePage({ content, site }: Props) {
-  return <GenericTemplate content={content} />;
+export default function SitePage({ content, site, lang }: Props) {
+  return <GenericTemplate content={content} site={site} lang={lang} />;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const sites = ['veterinarians', 'groomers'];
-  const langs = ['en', 'fr'];
+  const langs = ['ua', 'ru', 'en'];
 
   const paths = sites.flatMap((site) =>
     langs.map((lang) => ({
@@ -33,6 +34,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       content,
       site,
+      lang,
     },
   };
 };
