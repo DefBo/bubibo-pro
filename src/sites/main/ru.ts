@@ -1,4 +1,4 @@
 export default {
-  title: 'Welcome to the Main Site',
-  description: 'This is the English version of the main site.',
+  title: 'Добро пожаловать на главную страницу',
+  description: 'Это русскоязычная версия главной страницы сайта',
 };

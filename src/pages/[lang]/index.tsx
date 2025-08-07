@@ -2,8 +2,13 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import MainTemplate from '@/components/templates/MainTemplate/MainTemplate';
 import { getSiteContent } from '@/utils/getSiteContent';
 
-export default function MainPage({ content }: { content: any }) {
-  return <MainTemplate content={content} />;
+type Props = {
+  content: any;
+  lang: string;
+};
+
+export default function MainPage({ content, lang }: Props) {
+  return <MainTemplate content={content} lang={lang} />;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -18,6 +23,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const content = getSiteContent('main', lang);
 
   return {
-    props: { content },
+    props: {
+      content,
+      lang,
+    },
   };
 };
