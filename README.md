@@ -91,7 +91,7 @@ src/
 
 ## 🚀 Deployment
 
-- Export your app with `next export`
+- Run `next build`
 - Upload the `out/` directory to any static hosting (e.g., Netlify, Vercel, S3)
 
 ---
