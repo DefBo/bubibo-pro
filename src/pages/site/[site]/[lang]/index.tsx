@@ -3,7 +3,7 @@ import GenericTemplate from '@/components/templates/GenericTemplate/GenericTempl
 import { getSiteContent } from '@/utils/getSiteContent';
 
 type Props = {
-  content: any;
+  content: never;
   site: string;
   lang: string;
 };
@@ -28,7 +28,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const site = params?.site as string;
   const lang = params?.lang as string;
-  const content = getSiteContent(site, lang);
+  const content = await getSiteContent(site, lang);
 
   return {
     props: {

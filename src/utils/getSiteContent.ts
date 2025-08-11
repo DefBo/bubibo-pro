@@ -1,6 +1,7 @@
-export function getSiteContent(site: string, lang: string) {
+export async function getSiteContent(site: string, lang: string) {
   try {
-    return require(`../sites/${site}/${lang}.ts`).default;
+    const contentModule = await import(`../sites/${site}/${lang}.ts`);
+    return contentModule.default;
   } catch {
     return {
       title: 'Not Found',

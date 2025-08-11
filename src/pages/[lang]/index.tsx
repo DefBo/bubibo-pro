@@ -3,7 +3,7 @@ import MainTemplate from '@/components/templates/MainTemplate/MainTemplate';
 import { getSiteContent } from '@/utils/getSiteContent';
 
 type Props = {
-  content: any;
+  content: never;
   lang: string;
 };
 
@@ -20,7 +20,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const lang = params?.lang as string;
-  const content = getSiteContent('main', lang);
+  const content = await getSiteContent('main', lang);
 
   return {
     props: {
